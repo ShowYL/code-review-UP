@@ -13,13 +13,18 @@ describe('TicTacToe game', () => {
     }).toThrow();
   });
 
+  it('should not declare a winner after the first move', () => {
+    game.Play('X', 0, 0);
+    expect(game.Winner()).toBe(' ');
+  });
+
   it('should not allow player x to play twice in a row', () => {
     game.Play('X', 0, 0);
     expect(() => {
       game.Play('X', 1, 0);
     }).toThrow();
   });
-
+  
   it('should not allow a player to play in last played position', () => {
     game.Play('X', 0, 0);
     expect(() => {
