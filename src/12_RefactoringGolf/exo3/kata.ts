@@ -1,5 +1,4 @@
 const EMPTY_SYMBOL = ' ';
-const PLAYER_X = 'X';
 const PLAYER_O = 'O';
 
 const BOARD_SIZE = 3;
