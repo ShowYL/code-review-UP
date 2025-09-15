@@ -1,7 +1,7 @@
-pour chaque groupe participants:
+pour chaque groupe participants: PYN
 
 NOM prenom 
- - x
- - y
- - 7
-...
+ - Paqui ESTHER
+ - Yann LACAZE
+ - Néo BOUGIO
+
