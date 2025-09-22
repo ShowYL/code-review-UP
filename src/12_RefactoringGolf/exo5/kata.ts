@@ -90,7 +90,13 @@ class Board {
   }
 
   public AddTileAt(symbol: string, x: number, y: number): void {
-    this._plays.find((t: Tile) => t.X == x && t.Y == y)!.Symbol = symbol;
+    const tile: Tile = this.TileAt(x, y);
+
+    if(tile.Symbol != emptyPlay) {
+      throw new Error('Tile is already occupied');
+    }
+
+    tile.Symbol = symbol;
   }
 
   public findRowFullWithSamePlayer(): string {
