@@ -56,10 +56,21 @@ export class Game {
   }
 }
 
-interface Tile {
-  X: number;
-  Y: number;
-  Symbol: string;
+class Tile {
+  public X: number;
+  public Y: number;
+  public Symbol: string;
+
+  constructor(x: number, y: number, symbol: string) {
+    this.X = x;
+    this.Y = y;
+    this.Symbol = symbol;
+  }
+
+  hasSameSymbolAs(other: Tile) {
+    return this.Symbol === other.Symbol;
+  }
+
 }
 
 class Board {
@@ -68,7 +79,7 @@ class Board {
   constructor() {
     for (let i = firstRow; i <= thirdRow; i++) {
       for (let j = firstColumn; j <= thirdColumn; j++) {
-        const tile: Tile = { X: i, Y: j, Symbol: emptyPlay };
+        const tile: Tile = new Tile(i, j, emptyPlay);
         this._plays.push(tile);
       }
     }
