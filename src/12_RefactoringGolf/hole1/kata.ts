@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 const firstRow = 0;
 const secondRow = 1;
 const thirdRow = 2;
